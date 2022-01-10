@@ -35,7 +35,7 @@
         </nav>
     </header>
 
-    <main class="container">
+    <main>
         <div class="container">
             <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';" class="my-3 ms-3">
                 <ol class="breadcrumb">
@@ -62,43 +62,51 @@
             </div>
             <h4>Kontakta oss</h4>
 
-            <form class="needs-vaidation" action="" method="get" novalidate>
-                <div class="row">
+            <form class="row g-3 needs-validation" action="" method="get" novalidate>
+                <div>
                     <div class="col-sm-4">
                         <label for="nameInput" class="form-label">Namn</label>
                         <div class="form-floating has-validation">
                             <input type="text" class="form-control" id="nameInput" placeholder="Ange ditt namn *"
                                 aria-describedby="name" required>
                             <label for="nameInput" class="form-label">Skriv in ditt namn</label>
-                        </div>
-                        <div class="invalid-feedback">
-                            Du måste ange ett namn.
+                            <div class="invalid-feedback">
+                                Du måste ange ett namn.
+                            </div>
                         </div>
                     </div>
+
                     <div class="col-sm-4">
                         <label for="emailInput" class="form-label">E-post adress</label>
                         <div class="input-group">
                             <span class="input-group-text col-2" id="emailAddon">@</span>
                             <div class="form-floating col-10">
                                 <input type="email" class="form-control" id="emailInput" placeholder="namn@example.se"
-                                    aria-describedby="emailHelp">
+                                    aria-describedby="emailHelp" required>
                                 <label for="emailInput" class="form-label">förnamn.efternamn@domän.se</label>
                             </div>
-                            <div id="emailHelp" class="form-text">
-                                Hur snyggar man till detta (@ centrerad eller fast bredd på fältet)? Ibland kan den
-                                radbryta vilket inte är snyggt!
-                            </div>
+                        </div>
+                        <div for="emailInput" class="valid-feedback">
+                            Du måste ange en e-postadress.
+                        </div>
+                        <div id="emailHelp" class="form-text">
+                            Hur snyggar man till detta (@ centrerad eller fast bredd på fältet)? Ibland kan den
+                            radbryta vilket inte är snyggt!
                         </div>
                     </div>
+
                     <div class="col-sm-8">
                         <label for="messageInput" class="form-label mt-3">Meddelande</label>
                         <div class="form-floating">
                             <textarea class="form-control" id="messageInput" placeholder="Meddelande *"
-                                aria-describedby="message" rows="5" required></textarea>
+                                aria-describedby="message" rows="5" required style="height: 100px"></textarea>
                             <label for="messageInput" class="form-label">Skriv ditt meddelande här.</label>
-                        </div>
-                        <div class="invalid-feedback">
-                            Du måste ange ett meddelande.
+                            <div class="invalid-feedback">
+                                Du måste ange ett meddelande.
+                            </div>
+                            <div class="valid-feedback">
+                                Tack!
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -141,6 +149,7 @@
             toastList.forEach(toast => toast.show()); // This show them
         };
     </script>
+
 </body>
 
 </html>
