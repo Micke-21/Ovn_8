@@ -62,57 +62,58 @@
             </div>
             <h4>Kontakta oss</h4>
 
+
             <form class="row g-3 needs-validation" action="" method="get" novalidate>
-                <div>
-                    <div class="col-sm-4">
-                        <label for="nameInput" class="form-label">Namn</label>
-                        <div class="form-floating has-validation">
-                            <input type="text" class="form-control" id="nameInput" placeholder="Ange ditt namn *"
-                                aria-describedby="name" required>
-                            <label for="nameInput" class="form-label">Skriv in ditt namn</label>
-                            <div class="invalid-feedback">
-                                Du måste ange ett namn.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <label for="emailInput" class="form-label">E-post adress</label>
-                        <div class="input-group">
-                            <span class="input-group-text col-2" id="emailAddon">@</span>
-                            <div class="form-floating col-10">
-                                <input type="email" class="form-control" id="emailInput" placeholder="namn@example.se"
-                                    aria-describedby="emailHelp" required>
-                                <label for="emailInput" class="form-label">förnamn.efternamn@domän.se</label>
-                            </div>
-                        </div>
-                        <div for="emailInput" class="valid-feedback">
-                            Du måste ange en e-postadress.
-                        </div>
-                        <div id="emailHelp" class="form-text">
-                            Hur snyggar man till detta (@ centrerad eller fast bredd på fältet)? Ibland kan den
-                            radbryta vilket inte är snyggt!
-                        </div>
-                    </div>
-
-                    <div class="col-sm-8">
-                        <label for="messageInput" class="form-label mt-3">Meddelande</label>
-                        <div class="form-floating">
-                            <textarea class="form-control" id="messageInput" placeholder="Meddelande *"
-                                aria-describedby="message" rows="5" required style="height: 100px"></textarea>
-                            <label for="messageInput" class="form-label">Skriv ditt meddelande här.</label>
-                            <div class="invalid-feedback">
-                                Du måste ange ett meddelande.
-                            </div>
-                            <div class="valid-feedback">
-                                Tack!
-                            </div>
+                <div class="col-sm-4">
+                    <label for="nameInput" class="form-label">Namn</label>
+                    <div class="form-floating has-validation">
+                        <input type="text" class="form-control" id="nameInput" placeholder="Ange ditt namn *"
+                            aria-describedby="name" required>
+                        <label for="nameInput" class="form-label">Skriv in ditt namn</label>
+                        <div class="invalid-feedback">
+                            Du måste ange ett namn.
                         </div>
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary mt-3">Skicka meddelande</button>
+                <div class="col-sm-6">
+                    <label for="emailInput" class="form-label">E-post adress</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text col-1" id="emailAddon">@</span>
+                        <div class="form-floating col-11">
+                            <input type="email" class="form-control" id="emailInput" placeholder="namn@example.se"
+                                aria-describedby="emailHelp" required>
+                            <label for="emailInput" class="form-label">förnamn.efternamn@domän.se</label>
+                        </div>
+                    </div>
+                    <div id="emailHelp" class="form-text">
+                        Hur snyggar man till detta (@ centrerad eller fast bredd på fältet)? Ibland kan den
+                        radbryta vilket inte är snyggt! Desssutom får inte hjälptexten plats ibland.
+                    </div>
+                    <div class="invalid-feedback">
+                        Du måste ange en e-postadress.
+                    </div>
+                </div>
+
+                <div class="col-sm-10">
+                    <label for="messageInput" class="form-label mt-3">Meddelande</label>
+                    <div class="form-floating">
+                        <textarea class="form-control" id="messageInput" placeholder="Meddelande *"
+                            aria-describedby="message" rows="5" required style="height: 100px"></textarea>
+                        <label for="messageInput" class="form-label">Skriv ditt meddelande här.</label>
+                        <div class="invalid-feedback">
+                            Du måste ange ett meddelande.
+                        </div>
+                        <div class="valid-feedback">
+                            Tack!
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                <button type="submit" class="btn btn-primary  mt-3">Skicka meddelande</button>
+                </div>
             </form>
+
 
             <div class="toast position-fixed bottom-0 start-50 translate-middle-x mb-3">
                 <div id="sendMessage" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
