@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaffebutiken</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link href="css/bootstrap-override.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" width="50" height="25" href="index.html">
+                    <img src="bilder/kaffe.png" class="d-inline-block align-top" alt="Mickes kaffe butik">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link " href="index.html">Home</a> </li>
+                        <li class="nav-item"><a class="nav-link " href="produkter.html">Produkter</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="om.html">Om oss/Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div hidden><br><br><br>
+        <hr>
+    </div>
+    <main class="container">
+        <div class="container">
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';" class="my-3 ms-3">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="produkter.html">Produkter</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Om oss/Kontakt</li>
+                </ol>
+            </nav>
+            <h4>Vilka vi är</h4>
+            <div class="col-sm-12 mb-3 bg-white p-2">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi eos qui, architecto adipisci
+                    unde
+                    tenetur aperiam dolore assumenda ad aut esse voluptatibus dolorum magni quisquam pariatur? Quo atque
+                    architecto libero!</p>
+                </p>
+                <p>
+                    Att läsa är också enklare i den nya läsvyn. Du kan dölja delar av dokumentet och fokusera på de
+                    delar du
+                    vill arbeta med. Om du behöver avbryta läsningen innan du kommit till slutet kommer Word automatiskt
+                    ihåg var du var – även på en annan enhet. Video är ett kraftfullt sätt att få fram ditt budskap.
+                </p>
+
+            </div>
+            <h4>Kontakta oss</h4>
+
+            <form>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label for="nameInput" class="form-label">Namn</label>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="nameInput" placeholder="Ange ditt namn *"
+                                aria-describedby="name">
+                            <label for="nameInput" class="form-label">Skriv in ditt namn</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="emailInput" class="form-label">E-post adress</label>
+                        <div class="input-group">
+                            <span class="input-group-text col-2" id="emailAddon">@</span>
+                            <div class="form-floating col-10">
+                                <input type="email" class="form-control" id="emailInput" placeholder="namn@example.se"
+                                    aria-describedby="emailHelp">
+                                <label for="emailInput" class="form-label">förnamn.efternamn@domän.se</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <label for="messageInput" class="form-label mt-3">Meddelande</label>
+                    <div class="form-floating">
+                        <textarea class="form-control" id="messageInput" placeholder="Meddelande *"
+                            aria-describedby="message" rows="5"></textarea>
+                        <label for="messageInput" class="form-label">Skriv ditt meddelande här.</label>
+                    </div>
+                </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Skicka meddelande</button>
+        </form>
+        <div class="toast position-fixed bottom-0 start-50 translate-middle-x mb-3">
+            <div id="sendMessage" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto">Kaffebutiken säger...</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Vi har tagit emot ert meddelande. Vi kommer att kontakta dig inom kort!
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer class="container">
+        &copy;Micke
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById("sendMessage").onclick = function () {
+            var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+            var toastList = toastElList.map(function (toastEl) {
+                // Creates an array of toasts (it only initializes them)
+                return new bootstrap.Toast(toastEl) // No need for options; use the default options
+            });
+            toastList.forEach(toast => toast.show()); // This show them
+        };
+    </script>
+</body>
+
+</html>
